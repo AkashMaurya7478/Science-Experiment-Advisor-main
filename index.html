@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Science Experiment Advisor</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="auth-container" id="auth-container">
+            <div class="auth-box">
+                <h2>Welcome to Science Experiment Advisor</h2>
+                <div class="auth-tabs">
+                    <button class="auth-tab active" data-tab="login">Sign In</button>
+                    <button class="auth-tab" data-tab="register">Sign Up</button>
+                </div>
+                <div class="auth-form" id="login-form">
+                    <input type="email" id="login-email" placeholder="Email">
+                    <input type="password" id="login-password" placeholder="Password">
+                    <button onclick="login()">Sign In</button>
+                </div>
+                <div class="auth-form hidden" id="register-form">
+                    <input type="text" id="register-name" placeholder="Full Name">
+                    <input type="email" id="register-email" placeholder="Email">
+                    <input type="password" id="register-password" placeholder="Password">
+                    <button onclick="register()">Sign Up</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-container hidden" id="chat-container">
+            <div class="chat-header">
+                <div class="header-left">
+                    <h1>Science Experiment Advisor</h1>
+                </div>
+                <div class="header-right">
+                    <button id="theme-toggle" class="theme-toggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button id="history-toggle" class="history-toggle">
+                        <i class="fas fa-history"></i>
+                    </button>
+                    <button id="logout-button" class="logout-button">
+                        <i class="fas fa-sign-out-alt"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="history-sidebar hidden" id="history-sidebar">
+                <h3>Chat History</h3>
+                <div class="history-list" id="history-list">
+                    <!-- History items will be added here -->
+                </div>
+            </div>
+
+            <div class="main-content">
+                <div class="chat-messages" id="chat-messages">
+                    <div class="message bot-message">
+                        <div class="message-content">
+                            Hello! I'm your Science Experiment Advisor. Tell me what materials you have, and I'll suggest an experiment you can do with them.
+                        </div>
+                    </div>
+                </div>
+                <div class="input-section">
+                    <div class="input-container">
+                        <input type="text" id="user-input" placeholder="Enter materials (e.g., vinegar, baking soda)">
+                        <button onclick="askNVIDIA()" class="send-button">
+                            <svg viewBox="0 0 24 24" width="24" height="24">
+                                <path fill="currentColor" d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

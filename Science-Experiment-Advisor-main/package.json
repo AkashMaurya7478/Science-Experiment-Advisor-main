@@ -1,0 +1,21 @@
+{
+  "name": "science-experiment-advisor",
+  "version": "1.0.0",
+  "description": "AI-powered science experiment advisor",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "marked": "^15.0.7",
+    "openai": "^4.87.4"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "type": "module"
+}
